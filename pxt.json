@@ -1,21 +1,24 @@
 {
-    "name": "SCD41",
-    "version": "0.1.0",
-    "description": "Sensirion SCD41 I2C driver",
+    "name": "CO2 Sensor",
+    "version": "0.1.1",
+    "description": "Calliope mini CO2-Sensor",
     "license": "MIT",
     "dependencies": {
         "core": "*"
     },
     "files": [
         "README.md",
-        "SCD41.ts"
+        "SCD40.ts"
+        "_locales/de/SCD40-strings.json",
+        "_locales/de/SCD40-jsdoc-strings.json"
     ],
     "testFiles": [
         "test.ts"
     ],
     "public": true,
     "supportedTargets": [
-        "microbit"
+        "microbit",
+        "calliope-mini"
     ],
     "preferredEditor": "tsprj"
 }

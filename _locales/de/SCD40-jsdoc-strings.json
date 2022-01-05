@@ -1,0 +1,8 @@
+{
+	"SCD40.START_CONTINUOUS_MEASUREMENT": "Eine dauerhafte Messung starten.",
+	"SCD40.STOP_CONTINUOUS_MEASUREMENT": "Eine dauerhafte Messung stoppen.",
+	"SCD40.GET_CO2": "Den gemessenen CO2 Wert (in ppm) ausgeben. Nicht häufiger als einmal pro fünf Sekunden abfragen, ansonten wird der zuletzt gemessene Wert dargestellt.",
+	"SCD40.GET_TEMPERATURE": "Die gemessenene Temperatur in Fahrenheit oder Celsius ausgeben. Nicht häufiger als einmal pro fünf Sekunden abfragen, ansonten wird der zuletzt gemessene Wert dargestellt.",
+	"SCD40.GET_RELATIVE_HUMIDITY": "Die gemessene Luftfeuchtigkeit (RH) ausgeben.",
+	"SCD40.GET_PERFORM_FACTORY_RESET": "Den Sensor in den Auslieferungszustand zurück setzen."
+}

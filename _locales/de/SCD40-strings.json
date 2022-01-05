@@ -1,0 +1,8 @@
+{
+	"SCD40.START_CONTINUOUS_MEASUREMENT|block": "Dauerhaft messen",
+	"SCD40.STOP_CONTINUOUS_MEASUREMENT|block": "Messen stoppen",
+	"SCD40.GET_CO2|block": "CO2",
+	"SCD40.GET_TEMPERATURE|block": "Temperatur",
+	"SCD40.GET_RELATIVE_HUMIDITY|block": "Luftfeuchtigkeit",
+	"SCD40.PERFORM_FACTORY_RESET|block": "Sensor Zurücksetzen"
+}
