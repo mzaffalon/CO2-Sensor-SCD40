@@ -1,4 +1,5 @@
-//% weight=80 color=#00A654 icon="\uf75f" block="CO2-Sensor SCD40"
+
+//% weight=80 color=#00A654 icon="\uf72e" block="CO2-Sensor SCD40"
 namespace SCD40 {
 
     export enum SCD40_T_UNIT {

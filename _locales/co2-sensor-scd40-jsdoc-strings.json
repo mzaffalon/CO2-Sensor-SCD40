@@ -1,0 +1,9 @@
+{
+  "SCD40.get_co2": "get CO2. Call this at most once every 5 seconds, else last measurement value will be returned",
+  "SCD40.get_relative_humidity": "get relative humidity. Call this at most once every 5 seconds, else last measurement value will be returned",
+  "SCD40.get_temperature": "get temperature. Call this at most once every 5 seconds, else last measurement value will be returned",
+  "SCD40.init": "init",
+  "SCD40.perform_factory_reset": "perform a factory reset",
+  "SCD40.start_continuous_measurement": "start continuous measurement. Call this before reading measurements",
+  "SCD40.stop_continuous_measurement": "stop continuous measurement. Call this to stop SCD40 internal measurements"
+}

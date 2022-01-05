@@ -1,0 +1,13 @@
+{
+  "SCD40.SCD40_T_UNIT.C|block": "C",
+  "SCD40.SCD40_T_UNIT.F|block": "F",
+  "SCD40.get_co2|block": "CO2 %u",
+  "SCD40.get_relative_humidity|block": "relative humidity %u",
+  "SCD40.get_temperature|block": "temperature %u",
+  "SCD40.init|block": "init",
+  "SCD40.perform_factory_reset|block": "factory reset",
+  "SCD40.start_continuous_measurement|block": "start continuous measurement",
+  "SCD40.stop_continuous_measurement|block": "stop continuous measurement",
+  "SCD40|block": "CO2-Sensor SCD40",
+  "{id:category}SCD40": "SCD40"
+}

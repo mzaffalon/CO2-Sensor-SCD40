@@ -1,24 +1,25 @@
 {
-    "name": "CO2 Sensor",
+    "name": "co2-sensor-scd40",
     "version": "0.1.1",
     "description": "Calliope mini CO2-Sensor",
-    "license": "MIT",
     "dependencies": {
-        "core": "*"
+        "core": "*",
+        "radio": "*"
     },
     "files": [
         "README.md",
-        "SCD40.ts"
-        "_locales/de/SCD40-strings.json",
-        "_locales/de/SCD40-jsdoc-strings.json"
+        "main.blocks",
+        "main.ts",
+        "SCD40.ts",
+        "_locales/de/co2-sensor-scd40-jsdoc-strings.json",
+        "_locales/de/co2-sensor-scd40-strings.json"
     ],
     "testFiles": [
         "test.ts"
     ],
     "public": true,
     "supportedTargets": [
-        "microbit",
-        "calliope-mini"
+        "calliopemini"
     ],
     "preferredEditor": "tsprj"
 }
