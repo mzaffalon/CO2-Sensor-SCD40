@@ -1,31 +1,61 @@
+# Calliope mini CO2 Sensor library, based on Sensirion SCD40 Makecode Extension
 
-> Diese Seite bei [https://amerlander.github.io/co2-sensor-scd40/](https://amerlander.github.io/co2-sensor-scd40/) öffnen
+Makecode extension for the Calliope mini CO2 Sensor (Sensirion SCD40) connected to the Calliope mini platform.
 
-## Als Erweiterung verwenden
+This extension allows you to read CO2, temperature and relative humidity values with an interval of 5 seconds.
 
-Dieses Repository kann als **Erweiterung** in MakeCode hinzugefügt werden.
+## Supported Targets
 
-* öffne [https://makecode.calliope.cc/](https://makecode.calliope.cc/)
-* klicke auf **Neues Projekt**
-* klicke auf **Erweiterungen** unter dem Zahnrad-Menü
-* nach **https://github.com/amerlander/co2-sensor-scd40** suchen und importieren
+* PXT/microbit
+* Calliope mini
 
-## Dieses Projekt bearbeiten ![Build Status Abzeichen](https://github.com/amerlander/co2-sensor-scd40/workflows/MakeCode/badge.svg)
+## I2C Address
 
-Um dieses Repository in MakeCode zu bearbeiten.
+* 0x62
 
-* öffne [https://makecode.calliope.cc/](https://makecode.calliope.cc/)
-* klicke auf **Importieren** und dann auf **Importiere URL**
-* füge **https://github.com/amerlander/co2-sensor-scd40** ein und klicke auf Importieren
+## Usage
 
-## Blockvorschau
+open your Calliope mini makecode project, in "+ Extension", paste the following URL:
 
-Dieses Bild zeigt den Blockcode vom letzten Commit im Master an.
-Die Aktualisierung dieses Bildes kann einige Minuten dauern.
+https://github.com/calliope-edu/CO2-Sensor-SCD40
 
-![Eine gerenderte Ansicht der Blöcke](https://github.com/amerlander/co2-sensor-scd40/raw/master/.github/makecode/blocks.png)
 
-#### Metadaten (verwendet für Suche, Rendering)
+## API
 
-* for PXT/calliopemini
-<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+Get CO2 value in ppm
+```ts
+function get_co2()
+```
+
+Get temperature in degree celsius. Takes an optional argument to change to fahrenheit.
+```ts
+function get_temperature()
+```
+
+Get relative humidity in percent
+```ts
+function get_relative_humidity()
+```
+
+Start measurement. This method will be automatically called on initialization.
+If you call `stop_continuous_measurement()` you have to call this method again before CO2, temperature and humidity
+values can be retrieved again.
+```ts
+function start_continuous_measurement()
+```
+
+Stop measurement. After calling this function, no more sensor values can be read out
+anymore until you call `start_continuous_measurement`
+```ts
+function stop_continuous_measurement()
+```
+
+## Hardware
+
+![](icon.png)
+
+## License
+
+[MIT](LICENSE)
+
+Copyright (c) 2021, Sensirion AG
