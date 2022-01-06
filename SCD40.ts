@@ -56,6 +56,15 @@ namespace SCD40 {
     }
 
     /**
+     * perform a factory reset
+     */
+    //% blockId="SCD40_PERFORM_FACTORY_RESET" block="factory reset"
+    //% weight=80 blockGap=8
+    export function perform_factory_reset() {
+        pins.i2cWriteNumber(SCD40_I2C_ADDR, 0x3632, NumberFormat.UInt16BE);
+    }
+    
+    /**
      * init
      */
     //% blockId="SCD40_INIT" block="init"
@@ -114,14 +123,5 @@ namespace SCD40 {
     export function get_relative_humidity() {
         read_measurement();
         return relative_humidity;
-    }
-
-    /**
-     * perform a factory reset
-     */
-    //% blockId="SCD40_PERFORM_FACTORY_RESET" block="factory reset"
-    //% weight=80 blockGap=8
-    export function perform_factory_reset() {
-        pins.i2cWriteNumber(SCD40_I2C_ADDR, 0x3632, NumberFormat.UInt16BE);
     }
 }
