@@ -5,7 +5,7 @@
     "SCD40.get_relative_humidity|block": "Luftfeuchtigkeit (RH) %u",
     "SCD40.get_temperature|block": "Temperatur %u",
     "SCD40.init|block": "Initialisieren",
-    "SCD40.perform_factory_reset|block": "Sensor Zurücksetzen",
+    "SCD40.perform_factory_reset|block": "Sensor zurücksetzen",
     "SCD40.start_continuous_measurement|block": "Dauerhaft messen",
     "SCD40.stop_continuous_measurement|block": "Messen stoppen",
     "SCD40|block": "CO2-Sensor SCD40",
