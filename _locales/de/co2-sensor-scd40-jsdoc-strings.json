@@ -3,7 +3,7 @@
     "SCD40.get_relative_humidity": "Gibt die relative Luftfeuchtigkeit (RH) aus.",
     "SCD40.get_temperature": "Die gemessenene Temperatur in Fahrenheit oder Celsius ausgeben. Nicht häufiger als einmal pro fünf Sekunden abfragen, ansonten wird der zuletzt gemessene Wert dargestellt.",
     "SCD40.init": "Initialisieren",
-    "SCD40.perform_factory_reset": "Den Sensor in den zurücksetzen.",
+    "SCD40.perform_factory_reset": "Den Sensor zurücksetzen.",
     "SCD40.start_continuous_measurement": "Eine dauerhafte Messung starten.",
     "SCD40.stop_continuous_measurement": "Eine dauerhafte Messung stoppen."
 }
