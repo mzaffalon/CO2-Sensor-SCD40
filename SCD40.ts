@@ -3,9 +3,9 @@
 namespace SCD40 {
 
     export enum SCD40_T_UNIT {
-        //% block="C"
+        //% block="°C"
         C = 0,
-        //% block="F"
+        //% block="°F"
         F = 1
     }
 
@@ -59,7 +59,7 @@ namespace SCD40 {
      * perform a factory reset
      */
     //% blockId="SCD40_PERFORM_FACTORY_RESET" block="factory reset"
-    //% weight=80 blockGap=8
+    //% weight=60 blockGap=8
     export function perform_factory_reset() {
         pins.i2cWriteNumber(SCD40_I2C_ADDR, 0x3632, NumberFormat.UInt16BE);
     }
@@ -68,7 +68,7 @@ namespace SCD40 {
      * init
      */
     //% blockId="SCD40_INIT" block="init"
-    //% weight=80 blockGap=8
+    //% weight=90 blockGap=8
     export function init() {
         start_continuous_measurement();
     }
@@ -77,7 +77,7 @@ namespace SCD40 {
      * start continuous measurement. Call this before reading measurements
      */
     //% blockId="SCD40_START_CONTINUOUS_MEASUREMENT" block="start continuous measurement"
-    //% weight=80 blockGap=8
+    //% weight=70 blockGap=8
     export function start_continuous_measurement() {
         pins.i2cWriteNumber(SCD40_I2C_ADDR, 0x21b1, NumberFormat.UInt16BE);
     }
@@ -86,7 +86,7 @@ namespace SCD40 {
      * stop continuous measurement. Call this to stop SCD40 internal measurements
      */
     //% blockId="SCD40_STOP_CONTINUOUS_MEASUREMENT" block="stop continuous measurement"
-    //% weight=80 blockGap=8
+    //% weight=70 blockGap=8
     export function stop_continuous_measurement() {
         pins.i2cWriteNumber(SCD40_I2C_ADDR, 0x3F86, NumberFormat.UInt16BE);
         basic.pause(500);
@@ -118,7 +118,7 @@ namespace SCD40 {
     /**
      * get relative humidity. Call this at most once every 5 seconds, else last measurement value will be returned
      */
-    //% blockId="SCD40_GET_RELATIVE_HUMIDITY" block="relative humidity %u"
+    //% blockId="SCD40_GET_RELATIVE_HUMIDITY" block="relative humidity %u|%"
     //% weight=80 blockGap=8
     export function get_relative_humidity() {
         read_measurement();
