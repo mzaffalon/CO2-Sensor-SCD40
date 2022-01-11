@@ -1,8 +1,8 @@
 {
-    "SCD40.SCD40_T_UNIT.C|block": "C",
-    "SCD40.SCD40_T_UNIT.F|block": "F",
+    "SCD40.SCD40_T_UNIT.C|block": "°C",
+    "SCD40.SCD40_T_UNIT.F|block": "°F",
     "SCD40.get_co2|block": "CO2 (ppm) %u",
-    "SCD40.get_relative_humidity|block": "Luftfeuchtigkeit (RH) %u",
+    "SCD40.get_relative_humidity|block": "Luftfeuchtigkeit (RH) %u |\\%",
     "SCD40.get_temperature|block": "Temperatur %u",
     "SCD40.init|block": "Initialisieren",
     "SCD40.perform_factory_reset|block": "Sensor zurücksetzen",
