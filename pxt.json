@@ -1,6 +1,6 @@
 {
     "name": "co2-sensor-scd40",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "Calliope mini CO2-Sensor",
     "dependencies": {
         "core": "*",
