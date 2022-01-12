@@ -1,4 +1,3 @@
-
 //% weight=80 color=#00A654 icon="\uf0c2" block="CO2-Sensor SCD40"
 namespace SCD40 {
 
@@ -14,7 +13,6 @@ namespace SCD40 {
     let co2 = 0;
     let temperature = 0;
     let relative_humidity = 0;
-    let feature_set = 0;
 
     init();
 
@@ -59,16 +57,11 @@ namespace SCD40 {
      * perform a factory reset
      */
     //% blockId="SCD40_PERFORM_FACTORY_RESET" block="factory reset"
-    //% weight=60 blockGap=8
+    //% weight=60 blockGap=8 advanced=true
     export function perform_factory_reset() {
         pins.i2cWriteNumber(SCD40_I2C_ADDR, 0x3632, NumberFormat.UInt16BE);
     }
     
-    /**
-     * init
-     */
-    //% blockId="SCD40_INIT" block="init"
-    //% weight=90 blockGap=8
     export function init() {
         start_continuous_measurement();
     }
@@ -77,7 +70,7 @@ namespace SCD40 {
      * start continuous measurement. Call this before reading measurements
      */
     //% blockId="SCD40_START_CONTINUOUS_MEASUREMENT" block="start continuous measurement"
-    //% weight=70 blockGap=8
+    //% weight=70 blockGap=8 advanced=true
     export function start_continuous_measurement() {
         pins.i2cWriteNumber(SCD40_I2C_ADDR, 0x21b1, NumberFormat.UInt16BE);
     }
@@ -86,7 +79,7 @@ namespace SCD40 {
      * stop continuous measurement. Call this to stop SCD40 internal measurements
      */
     //% blockId="SCD40_STOP_CONTINUOUS_MEASUREMENT" block="stop continuous measurement"
-    //% weight=70 blockGap=8
+    //% weight=70 blockGap=8 advanced=true
     export function stop_continuous_measurement() {
         pins.i2cWriteNumber(SCD40_I2C_ADDR, 0x3F86, NumberFormat.UInt16BE);
         basic.pause(500);
