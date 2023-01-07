@@ -3,8 +3,7 @@
     "version": "0.1.2",
     "description": "Calliope mini CO2-Sensor",
     "dependencies": {
-        "core": "*",
-        "radio": "*"
+        "core": "*"
     },
     "files": [
         "README.md",
@@ -18,6 +17,10 @@
         "test.ts"
     ],
     "public": true,
+    "targetVersions": {
+        "target": "4.0.29",
+        "targetId": "calliopemini"
+    },
     "supportedTargets": [
         "calliopemini"
     ],
