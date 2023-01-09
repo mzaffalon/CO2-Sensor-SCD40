@@ -50,7 +50,9 @@ namespace SCD40 {
         let adc_t = values[1];
         let adc_rh = values[2];
         temperature =  -45 + (175 * adc_t / (1 << 16));
+        temperature = (Math.round(temperature * 10) / 10)
         relative_humidity = 100 * adc_rh / (1 << 16);
+        relative_humidity = (Math.round(relative_humidity * 10) / 10)
     }
 
     /**
