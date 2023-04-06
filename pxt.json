@@ -1,6 +1,6 @@
 {
     "name": "co2-sensor-scd40",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "Calliope mini CO2-Sensor",
     "dependencies": {
         "core": "*"
@@ -11,7 +11,8 @@
         "main.ts",
         "SCD40.ts",
         "_locales/de/co2-sensor-scd40-jsdoc-strings.json",
-        "_locales/de/co2-sensor-scd40-strings.json"
+        "_locales/de/co2-sensor-scd40-strings.json",
+        "_locales/ua/co2-sensor-scd40-jsdoc-strings.json"
     ],
     "testFiles": [
         "test.ts"
