@@ -12,7 +12,7 @@
         "SCD40.ts",
         "_locales/de/co2-sensor-scd40-jsdoc-strings.json",
         "_locales/de/co2-sensor-scd40-strings.json",
-        "_locales/ua/co2-sensor-scd40-jsdoc-strings.json"
+        "_locales/uk/co2-sensor-scd40-jsdoc-strings.json"
     ],
     "testFiles": [
         "test.ts"
