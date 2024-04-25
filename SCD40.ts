@@ -59,6 +59,7 @@ namespace SCD40 {
      * perform a factory reset
      */
     //% blockId="SCD40_PERFORM_FACTORY_RESET" block="factory reset"
+    //% block.loc.de="auf Werkseinstellung setzen"    
     //% weight=60 blockGap=8 advanced=true
     export function perform_factory_reset() {
         pins.i2cWriteNumber(SCD40_I2C_ADDR, 0x3632, NumberFormat.UInt16BE);
@@ -72,6 +73,7 @@ namespace SCD40 {
      * start continuous measurement. Call this before reading measurements
      */
     //% blockId="SCD40_START_CONTINUOUS_MEASUREMENT" block="start continuous measurement"
+    //% block.loc.de="starte dauerhafte Messung"
     //% weight=70 blockGap=8 advanced=true
     export function start_continuous_measurement() {
         pins.i2cWriteNumber(SCD40_I2C_ADDR, 0x21b1, NumberFormat.UInt16BE);
@@ -81,6 +83,7 @@ namespace SCD40 {
      * stop continuous measurement. Call this to stop SCD40 internal measurements
      */
     //% blockId="SCD40_STOP_CONTINUOUS_MEASUREMENT" block="stop continuous measurement"
+    //% block.loc.de="stoppe dauerhafte Messung"
     //% weight=70 blockGap=8 advanced=true
     export function stop_continuous_measurement() {
         pins.i2cWriteNumber(SCD40_I2C_ADDR, 0x3F86, NumberFormat.UInt16BE);
@@ -91,6 +94,7 @@ namespace SCD40 {
      * get CO2. Call this at most once every 5 seconds, else last measurement value will be returned
      */
     //% blockId="SCD40_GET_CO2" block="CO2 %u"
+    //% block.loc.de="CO2 %u"
     //% weight=80 blockGap=8
     export function get_co2() {
         read_measurement();
@@ -101,6 +105,7 @@ namespace SCD40 {
      * get temperature. Call this at most once every 5 seconds, else last measurement value will be returned
      */
     //% blockId="SCD40_GET_TEMPERATURE" block="temperature %u"
+    //% block.loc.de="Temperatur %u"
     //% weight=80 blockGap=8
     export function get_temperature(unit: SCD40_T_UNIT = SCD40_T_UNIT.C) {
         read_measurement();
@@ -114,6 +119,7 @@ namespace SCD40 {
      * get relative humidity. Call this at most once every 5 seconds, else last measurement value will be returned
      */
     //% blockId="SCD40_GET_RELATIVE_HUMIDITY" block="relative humidity %u|%"
+    //% block.loc.de="relative Luftfeuchtigkeit %u|%"
     //% weight=80 blockGap=8
     export function get_relative_humidity() {
         read_measurement();
