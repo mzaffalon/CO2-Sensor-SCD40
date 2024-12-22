@@ -17,7 +17,7 @@ This extension allows you to read CO2, temperature and relative humidity values 
 
 open your Calliope mini makecode project, in "+ Extension", paste the following URL:
 
-https://github.com/calliope-edu/CO2-Sensor-SCD40
+https://github.com/mzaffalon/CO2-Sensor-SCD40
 
 
 ## API
