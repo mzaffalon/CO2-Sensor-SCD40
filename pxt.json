@@ -10,7 +10,8 @@
         "main.blocks",
         "main.ts",
         "_locales/de/co2-sensor-scd40-jsdoc-strings.json",
-        "_locales/de/co2-sensor-scd40-strings.json"
+        "_locales/de/co2-sensor-scd40-strings.json",
+        "main.py"
     ],
     "testFiles": [
         "test.ts"

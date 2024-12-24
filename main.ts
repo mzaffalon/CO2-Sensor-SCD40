@@ -12,6 +12,7 @@ namespace SCD40 {
 
     let co2 = 0;
     let temperature = 0;
+    let temperatureF = 0;
     let relative_humidity = 0;
     let CTH = [0, 0, 0];
 
@@ -52,6 +53,7 @@ namespace SCD40 {
         let adc_rh = values[2];
         temperature = -45 + (175 * adc_t / (1 << 16));
         temperature = (Math.round(temperature * 10) / 10)
+        temperatureF = 32 + ((temperature * 9) / 5);
         relative_humidity = 100 * adc_rh / (1 << 16);
         relative_humidity = (Math.round(relative_humidity * 10) / 10)
     }
@@ -94,8 +96,8 @@ namespace SCD40 {
     /**
      * get CO2. Call this at most once every 5 seconds, else last measurement value will be returned
      */
-    //% blockId="SCD40_GET_CO2" block="CO2 %u"
-    //% block.loc.de="CO2 %u"
+    //% blockId="SCD40_GET_CO2" block="CO2 (ppm)"
+    //% block.loc.de="CO2 (ppm)"
     //% weight=80 blockGap=8
     export function get_co2() {
         read_measurement();
@@ -105,22 +107,19 @@ namespace SCD40 {
     /**
      * get temperature. Call this at most once every 5 seconds, else last measurement value will be returned
      */
-    //% blockId="SCD40_GET_TEMPERATURE" block="temperature %u"
-    //% block.loc.de="Temperatur %u"
+    //% blockId="SCD40_GET_TEMPERATURE" block="temperature $units [°C or°F]"
+    //% block.loc.de="Temperatur $units [°C or °F]"
     //% weight=80 blockGap=8
     export function get_temperature(unit: SCD40_T_UNIT = SCD40_T_UNIT.C) {
         read_measurement();
-        if (unit == SCD40_T_UNIT.C) {
-            return temperature;
-        }
-        return 32 + ((temperature * 9) / 5);
+        return (unit == SCD40_T_UNIT.C) ? temperature : temperatureF;
     }
 
     /**
      * get relative humidity. Call this at most once every 5 seconds, else last measurement value will be returned
      */
-    //% blockId="SCD40_GET_RELATIVE_HUMIDITY" block="relative humidity|%"
-    //% block.loc.de="relative Luftfeuchtigkeit|%"
+    //% blockId="SCD40_GET_RELATIVE_HUMIDITY" block="relative humidity"
+    //% block.loc.de="relative Luftfeuchtigkeit"
     //% weight=80 blockGap=8
     export function get_relative_humidity() {
         read_measurement();
@@ -130,12 +129,13 @@ namespace SCD40 {
     /**
      * get CO2, temperature and relative humidity at once. Call this at most once every 5 seconds, else last measurement value will be returned
     */
-    //% blockId="SCD40_GET_ALL_READINGS" block="all reading"
-    //% block.loc.de="alle Messungen (CO2, Temperatur und Luftfeuchtigkeit)"
+    //% blockId="SCD40_GET_ALL_READINGS"
+    //% block="all reading"
+    //% block.loc.de="CO2, Temperatur und Luftfeuchtigkeit|input °C or °F"
     //% weight=80 blockGap=8
-    export function get_all_readings(unit: SCD40_T_UNIT = SCD40_T_UNIT.C) {
+    export function get_all_readings(unit: SCD40_T_UNIT = SCD40_T_UNIT.C) : number[] {
         read_measurement();
-        let _temperature = ((unit == SCD40_T_UNIT.C) ? temperature : 32 + ((temperature * 9) / 5));
+        let _temperature = (unit == SCD40_T_UNIT.C ? temperature : temperatureF);
         return [co2, _temperature, relative_humidity];
     }
 }
